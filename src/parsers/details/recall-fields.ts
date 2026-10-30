@@ -1,0 +1,23 @@
+export const recallFields = {
+  date: ['Dátum'],
+  product: ['Termék neve', 'Termékek megnevezése', 'Termék megnevezése'],
+  reason: ['Probléma jellege'],
+  notifier: ['Bejelentő'],
+  recallType: ['Visszahívás módja'],
+  rasffReference: ['RASFF referencia szám', 'RASFF referenciaszám'],
+  brand: ['Márka'],
+  origin: [
+    'A termék eredete (szennyezett alapanyagé)',
+    'A termék eredete',
+    'Származási hely',
+    'Származási ország',
+  ],
+  manufacturer: ['Gyártó'],
+  distributors: ['Forgalmazók', 'Forgalmazó'],
+  action: ['Intézkedés'],
+  customerInformation: ['Vásárlói információ', 'Vásárlói információk'],
+  productIdentification: ['Termékek adatai', 'Termék adatai'],
+  packaging: ['Kiszerelés'],
+  batchNumber: ['Tételszám', 'Tételazonosító'],
+  expiryDate: ['Minőségmegőrzési idő', 'Fogyaszthatósági idő', 'Lejárati idő'],
+};

@@ -1,0 +1,51 @@
+{
+  "name": "nebih-portal",
+  "version": "0.1.0",
+  "description": "Modular TypeScript client for the public Nébih portal",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "readme.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "node scripts/clean.mjs && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run format:check && npm run typecheck && npm run build",
+    "smoke": "tsx scripts/smoke.ts",
+    "audit:portal": "tsx scripts/audit.ts",
+    "audit:details": "tsx scripts/audit-details.ts",
+    "verify:datasets": "tsx scripts/verify-datasets.ts",
+    "prepare": "npm run build",
+    "format": "prettier --write src scripts examples package.json tsconfig*.json .prettierrc.json",
+    "format:check": "prettier --check src scripts examples package.json tsconfig*.json .prettierrc.json"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "domhandler": "^6.0.1",
+    "tough-cookie": "^6.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "prettier": "^3.9.10",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haverfalat/nebih-portal.git"
+  },
+  "homepage": "https://github.com/haverfalat/nebih-portal#readme",
+  "bugs": {
+    "url": "https://github.com/haverfalat/nebih-portal/issues"
+  }
+}
